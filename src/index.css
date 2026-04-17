@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --bg-main: #f4f4f5;
+  --bg-card: #ffffff;
+  --ink-primary: #18181b;
+  --ink-secondary: #71717a;
+  --accent: #2563eb;
+  --border: #e4e4e7;
+  --chess-white: #ffffff;
+  --chess-black: #27272a;
+  --success: #10b981;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--bg-main)] text-[var(--ink-primary)] font-sans antialiased;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/* Custom Scrollbar for Pairing Grid */
+.pairing-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pairing-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pairing-grid::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.pairing-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-secondary);
+}
