@@ -1,0 +1,6 @@
+{
+  "name": "ENSA-M SWISS MASTER",
+  "description": "A professional Swiss System chess tournament manager with automatic pairings, color balancing, and Buchholz tie-breaks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

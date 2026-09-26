@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENSA-M SWISS MASTER</title>
+    <meta name="description" content="A professional Swiss System chess tournament manager with automatic pairings, color balancing, and Buchholz tie-breaks." />
+    <meta property="og:title" content="ENSA-M SWISS MASTER" />
+    <meta property="og:description" content="A professional Swiss System chess tournament manager with automatic pairings, color balancing, and Buchholz tie-breaks." />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('swiss-chess-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

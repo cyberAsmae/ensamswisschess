@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --bg-main: #f4f4f5;
+  --bg-card: #ffffff;
+  --bg-surface: #fcfcfd;
+  --bg-input: #ffffff;
+  --bg-muted: #f1f2f5;
+  --ink-primary: #18181b;
+  --ink-secondary: #71717a;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border: #e4e4e7;
+  --chess-white: #ffffff;
+  --chess-black: #27272a;
+  --success: #10b981;
+}
+
+.dark,
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg-main: #0c0e14;
+  --bg-card: #141721;
+  --bg-surface: #191c28;
+  --bg-input: #10121a;
+  --bg-muted: #1e2230;
+  --ink-primary: #f3f4f6;
+  --ink-secondary: #9ca3af;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --border: #262b3a;
+  --chess-white: #e2e8f0;
+  --chess-black: #090a0f;
+  --success: #10b981;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--bg-main)] text-[var(--ink-primary)] font-sans antialiased;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/* Custom Scrollbar for Pairing Grid */
+.pairing-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pairing-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pairing-grid::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+.pairing-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-secondary);
+}
